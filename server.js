@@ -8,7 +8,9 @@ var PORT = 3000;
 	res.send('Hello Express!');
 })*/
 
-var middleware = {
+var middleware = require('./middleware.js');
+
+/*var middleware = {
 	requireAuthentication: function (req, res, next) {
 		console.log('private route hit!');
 		next();
@@ -18,7 +20,7 @@ var middleware = {
 		console.log('Request: ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
 		next();
 	}
-};
+};*/
 
 app.use(middleware.logger);
 
